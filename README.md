@@ -6,7 +6,7 @@ A simple python library for interacting with [VOICEVOX
 Engine](https://github.com/VOICEVOX/voicevox_engine)
 
 
-Install `pip install .`
+Install: `pip3 install .` or `pip3 install git+https://github.com/upa/pyvoicevox`
 
 ```python
 import pyvoicevox as pv2
