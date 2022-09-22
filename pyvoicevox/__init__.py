@@ -1,0 +1,1 @@
+from pyvoicevox.pyvoicevox import *
