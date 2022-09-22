@@ -2,7 +2,7 @@
 
 ### pyvoicevox
 
-A simple python binding to interact with [VOICEVOX
+A simple python library for interacting with [VOICEVOX
 Engine](https://github.com/VOICEVOX/voicevox_engine)
 
 
