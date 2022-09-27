@@ -27,7 +27,7 @@ class UserWord:
         self.uuid = uuid # only for get_registered_user_words
 
     def __str__(self):
-        return "{} pronounce:{} accept:{}".format(self.surface,
+        return "{} pronounce:{} accent:{}".format(self.surface,
                                                   self.pronounce, self.accent_type)
 
 
