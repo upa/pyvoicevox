@@ -47,7 +47,7 @@ class VVoxEngine:
         for char in r.json():
             char_name = char["name"]
             for style in char["styles"]:
-                speakers[style["id"]] = "{}, {}".format(char_name, style["name"])
+                speakers[style["id"]] = { "name": char_name, "style": style["name"]}
 
         # return [ (id, name), (id, name), ... ]
         return [ (x[0], x[1]) for x in sorted(speakers.items(), key = lambda x: x[0])]
@@ -58,8 +58,6 @@ class VVoxEngine:
         if not speaker_id in ids:
             raise ValueError("invalid speaker id {}".format(speaker_id))
         self.speaker = speaker_id
-
-    
 
     def get_registered_user_words(self, raw_format = False):
         uri = "{}/user_dict".format(self.endpoint)
