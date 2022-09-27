@@ -5,7 +5,6 @@ import pyvoicevox as pv2
 # Run this test while running voicevox-core on localhost:50021
 endpoint = "http://127.0.0.1:50021"
 
-
 def test_v2e_get_speakers():
     v2e = pv2.VVoxEngine(endpoint)
 
@@ -58,5 +57,5 @@ def test_v2e_synthesis_save():
     pv2.save_wav(wav, "pv2-tiral-speaker-{}.wav".format(v2e.speaker))
 
     wav = v2e.synthesize("テストですよ", speaker = 11)
-    pv2.save_wav(wav, "pv2-trial-speaker-{}.wav".format(11))
+    v2e.save_wav(wav, "pv2-trial-speaker-{}.wav".format(11))
 

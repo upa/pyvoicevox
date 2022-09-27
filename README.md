@@ -17,7 +17,7 @@ pv2.save_wav(wav, "hoge.wav")
 
 # with a different speaker.
 wav = v2e.synthesize("ほげ", speaker = 4)
-pv2.save_wav(wav, "hoge.wav")
+v2e.save_wav(wav, "hoge.wav")
 
 # print speaker list
 print("\n".join(map(lambda m: "id={} {}".format(m[0], m[1]), v2e.get_speakers())))

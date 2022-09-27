@@ -158,6 +158,9 @@ class VVoxEngine:
         r.raise_for_status()
         return r.content # binary of wav
 
+    def save_wav(self, wav, path):
+        _save_wav(wav, path)
+
 
 
 def zen2han(text):
@@ -165,6 +168,9 @@ def zen2han(text):
     return text.translate(str.maketrans({chr(0xFF01 + i):
                                          chr(0x21 + i) for i in range(94)}))
     
-def save_wav(wav, path):
+def _save_wav(wav, path):
     with open(path, "wb") as f:
         f.write(wav)
+
+def save_wav(wav, path):
+    _save_wav(wav, path)
